@@ -1,0 +1,32 @@
+<!Doctype html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div>JS/Inheritance</div>
+        <script>
+            class veggie{
+                constructor(name){
+                    this.name = name;
+                }
+                display(){
+                    console.log(`${this.name} ${this.color}`)
+                }
+            }
+                class veggie1 extends veggie{
+                    constructor(name,color){
+                        super(name);
+                        this.color = color;
+                    }
+                    show(){
+                        console.log(`${name} ${color}`);
+                    }
+                }
+                let res = new veggie1("carrot", "orange");
+                console.log((res.name),(res.color));
+            
+        </script>
+        
+    </body>
+</html>
