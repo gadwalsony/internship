@@ -3,18 +3,32 @@
     <head></head>
 </html>
 <body>
-    <div>JS CLASSES</div>
+    <div>JS OOPS / objects</div>
     <script>
-        class rectangle{
-            constructor(height, width){
-                this.height = height;
-                this.width = width
+        //using constructor
+        /*function name(f_name, l_name){
+            this.f_name = f_name;
+            this.l_name = l_name;
+
+        }
+        let person1 = new name('nani','gadwal');
+        console.log(person1.f_name);*/
+
+        //using Object.create()
+        fruit = {
+            color: 'yellow',
+            name : 'mango',
+            display: function(){
+                console.log(`${this.name} ${this.price} rs`);
             }
-        getdetails(){
-return(`${height} ${width}`)         }
-    }
-    let rect1 = new rectangle(44,36);
-    console.log((rect1.height),(rect1.width));
-        </script>
-    
+
+        }
+        const fruit1 = Object.create(fruit);
+        fruit1.name = 'banana';
+        fruit1.price = 30;
+        fruit1.display();
+        
+
+        
+    </script>
 </body>
