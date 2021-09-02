@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JSON data</title>
+    </head>
+    <body>
+        <h2>JS Fetch</h2>
+        <p id = "data"></p>
+        
+        <script type ="text/javascript">
+            fetch('file.json')
+            .then(function(response){
+                return response.json();
+                json.parse(response);
+            })
+            .then(function(data){
+                for(var i=0;i<data.length;i++){
+                    document.getElementById('data').innerHTML += 
+                     data[i].firstname + " " + data[i].lastname +"<br>"
+                }
+            }).catch(function(err){
+                console.log('error');
+            });
+            </script>
+    </body>
+</html>
